@@ -22,3 +22,6 @@ map("n", "<leader>xD", "<cmd>:bd<cr>", { desc = "Delete Buffer and Window" })
 -- new file
 map("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
 
+map({ "n", "x" }, "<leader>fm", function()
+  LazyVim.format({ force = true })
+end, { desc = "Format" })
